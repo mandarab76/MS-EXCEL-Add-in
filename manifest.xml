@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+  <Id>c88e0d4e-8b1a-4e2a-8b41-atsintegrated-2025</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>ATS Integrated</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="ATS Financials Add-in"/>
+  <Description DefaultValue="Automated Schedule III financial statement generator for Excel. Import Trial Balance, generate, audit, and export compliant statements."/>
+  <Hosts>
+    <Host Name="Workbook"/>
+  </Hosts>
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="ExcelApi" MinVersion="1.4"/>
+    </Sets>
+  </Requirements>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+  </DefaultSettings>
+  <ExtensionPoint xsi:type="MessageReadCommandSurface">
+    <CustomTab id="FinancialStatementsTab">
+      <Group id="ATSGroup" label="Financial Statements">
+        <Control xsi:type="Button" id="GenerateStatementsButton"
+          label="Generate Financials"
+          icon="assets/icon-32.png"
+          onAction="onGenerateFinancials" />
+        <Control xsi:type="Button" id="AuditAssessmentButton"
+          label="Audit Assessment"
+          icon="assets/icon-32.png"
+          onAction="onAuditAssessment" />
+      </Group>
+    </CustomTab>
+  </ExtensionPoint>
+</OfficeApp>
