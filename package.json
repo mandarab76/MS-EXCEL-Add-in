@@ -1,0 +1,31 @@
+{
+  "name": "ats-financials-addin",
+  "version": "1.0.0",
+  "description": "Excel Add-in for Schedule III Financial Statements (ATS Integrated)",
+  "main": "src/taskpane/taskpane.ts",
+  "scripts": {
+    "start": "office-addin-debugging start",
+    "build": "webpack --mode production",
+    "stop": "office-addin-debugging stop"
+  },
+  "keywords": [
+    "Excel",
+    "Add-in",
+    "Schedule III",
+    "Financial Statement",
+    "Audit",
+    "India",
+    "ATS Integrated"
+  ],
+  "author": "ATS Integrated",
+  "license": "MIT",
+  "dependencies": {
+    "@microsoft/office-js": "^1.1.110"
+  },
+  "devDependencies": {
+    "@types/office-js": "^1.0.191",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "office-addin-debugging": "^4.5.3"
+  }
+}
